@@ -2,6 +2,10 @@
 
 一个离线运行的Windows桌面工具：按可编辑字表替换DOCX/TXT中的指定字形，保留原文件，另存处理结果。
 
+## 下载试用版
+
+[下载 Windows x64 试用版 v0.1.0](https://github.com/tokitoki54/word-clean/releases/tag/v0.1.0)。下载页面中的 `WordClean-v0.1.0-windows-x64.zip`，完整解压后运行 `WordClean.exe`。这是未签名的试用版本，建议先用文稿副本验证效果。
+
 ## 功能
 
 - 默认122条不同码位的新旧字形映射，不进行通用简繁转换。
@@ -13,7 +17,7 @@
 
 ## 运行
 
-Windows EXE版：将完整程序文件夹解压至可写目录，双击`WordClean.exe`。必须保留旁边的`_internal`和默认CSV，不要只复制EXE。不需要安装Python。若Release尚无附件，可使用源码运行。
+Windows EXE版：将完整程序文件夹解压至可写目录，双击`WordClean.exe`。必须保留旁边的`_internal`和默认CSV，不要只复制EXE。不需要安装Python。也可按下方说明使用源码运行。
 
 源码：安装带Tkinter的Python 3.12或兼容版本后，在项目目录运行：
 
