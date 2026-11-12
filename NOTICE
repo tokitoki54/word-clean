@@ -1,0 +1,12 @@
+Word Clean
+Copyright 2026 Word Clean contributors
+
+The default mapping includes a selected subset of mappings from:
+OpenCC-Traditional-Chinese-characters-according-to-Chinese-government-standards
+Contributor: TerryTian-tech
+Upstream file: t2gov/GovVariants_keep_simp.txt
+Commit: 19de6a2a122de8b93c1ee20f915eeb00013f56a6
+https://github.com/TerryTian-tech/OpenCC-Traditional-Chinese-characters-according-to-Chinese-government-standards
+The upstream file declares the Apache License, Version 2.0.
+Changes: selection of 121 matching mapping pairs, two-column CSV serialization, and addition of the independently verified character correspondence 刄→刃. No upstream conversion engine code, website images or descriptive text is included.
+See DATA_SOURCES.md for scope and attribution.
