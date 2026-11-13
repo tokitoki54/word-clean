@@ -205,17 +205,17 @@ class Tests(unittest.TestCase):
         default=self.root/'default.csv';default.write_bytes(original.read_bytes())
         with patch.object(mod,'DEFAULT_PATH',default):
             root=tk.Tk();root.withdraw();app=mod.App(root)
-            self.assertIn('新旧字形122条（已据资料核对）',app.map_info.get());self.assertEqual(app.map_path.get(),str(default))
+            self.assertIn('新旧字形160条（项目逐项审阅）',app.map_info.get());self.assertEqual(app.map_path.get(),str(default))
             # Tamper after launch: pre-action refresh must remove the verified badge.
             default.write_bytes(default.read_bytes()+b'\n')
             with patch.object(mod.messagebox,'showinfo'):app.run(False)
-            self.assertNotIn('已据资料核对',app.map_info.get());self.assertIn('待核对',app.map_info.get())
-            default.write_bytes(original.read_bytes());app.update_map_info();self.assertIn('已据资料核对',app.map_info.get())
+            self.assertNotIn('项目逐项审阅',app.map_info.get());self.assertIn('待核对',app.map_info.get())
+            default.write_bytes(original.read_bytes());app.update_map_info();self.assertIn('项目逐项审阅',app.map_info.get())
             custom=self.root/'custom.csv';custom.write_bytes(original.read_bytes());app.map_path.set(str(custom));app.update_map_info()
-            self.assertNotIn('已据资料核对',app.map_info.get())
+            self.assertNotIn('项目逐项审阅',app.map_info.get())
             root.destroy();default.unlink()
             root=tk.Tk();root.withdraw();app=mod.App(root)
-            self.assertEqual(app.map_path.get(),str(default));self.assertIn('默认字表缺失',app.map_info.get());self.assertNotIn('已据资料核对',app.map_info.get());root.destroy()
+            self.assertEqual(app.map_path.get(),str(default));self.assertIn('默认字表缺失',app.map_info.get());self.assertNotIn('项目逐项审阅',app.map_info.get());root.destroy()
 
     def test_expanded_default115_integrity_and_scope(self):
         import xml.etree.ElementTree as ET

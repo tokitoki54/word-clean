@@ -1,0 +1,17 @@
+{
+  "version": 6,
+  "file": "默认字表_新旧字形_v6.csv",
+  "count": 160,
+  "sha256": "05b2cd07ce887d74da0ffe36389dde22a655b120db71c53cb70d18fb7aedd4a4",
+  "columns": [
+    "旧字型",
+    "新字形"
+  ],
+  "baseline": {
+    "file": "默认字表_新旧字形_v5.csv",
+    "count": 122,
+    "sha256": "ee72aef282d1d82a7844d2f6b8dc47b0cded2d09f03f0883f510879737f505af"
+  },
+  "added_count": 38,
+  "scope": "Project-selected, individually reviewed replacement rules; not a complete national-standard table."
+}

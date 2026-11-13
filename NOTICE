@@ -9,4 +9,5 @@ Commit: 19de6a2a122de8b93c1ee20f915eeb00013f56a6
 https://github.com/TerryTian-tech/OpenCC-Traditional-Chinese-characters-according-to-Chinese-government-standards
 The upstream file declares the Apache License, Version 2.0.
 Changes: selection of 121 matching mapping pairs, two-column CSV serialization, and addition of the independently verified character correspondence 刄→刃. No upstream conversion engine code, website images or descriptive text is included.
+Version 6 preserves those 122 pairs and adds 38 project-selected replacement rules. Of the 160 current pairs, 155 match the same-direction pairs in upstream commit 7e36fb6789246521d2e824f6a083b0403fb454e4; the other five are 刄→刃, 嚔→嚏, 悳→惪, 敎→教 and 槇→槙. The additions include three individually checked character correspondences and 35 editorial selections. This is not a complete national-standard table or an endorsement by the cited sources.
 See DATA_SOURCES.md for scope and attribution.

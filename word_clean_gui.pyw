@@ -8,8 +8,8 @@ from word_clean_core import load_mapping, process_docx, process_file
 from word_clean_history import append_history, read_history
 
 BASE=Path(sys.executable).resolve().parent if getattr(sys,"frozen",False) else Path(__file__).resolve().parent
-DEFAULT_PATH=BASE/'默认字表_新旧字形_v5.csv'
-DEFAULT_SHA256='ee72aef282d1d82a7844d2f6b8dc47b0cded2d09f03f0883f510879737f505af'
+DEFAULT_PATH=BASE/'默认字表_新旧字形_v6.csv'
+DEFAULT_SHA256='05b2cd07ce887d74da0ffe36389dde22a655b120db71c53cb70d18fb7aedd4a4'
 
 def digest(path):
     return hashlib.sha256(Path(path).read_bytes()).hexdigest()
@@ -19,7 +19,7 @@ def is_reviewed_default(path):
     except OSError:return False
 
 def mapping_label(path):
-    if is_reviewed_default(path):return '新旧字形122条（已据资料核对）'
+    if is_reviewed_default(path):return '新旧字形160条（项目逐项审阅）'
     if Path(path).resolve()==DEFAULT_PATH.resolve() and not Path(path).exists():
         return '默认字表缺失，请点击“选择”指定字表；不会回退历史表。'
     return '历史 / 自选字表（待核对范围）'
@@ -27,7 +27,7 @@ def mapping_label(path):
 class App:
     def __init__(self,root):
         self.root=root; self.files=[]; self.ready=None; self.busy=False; self.events=queue.Queue(); self.last_output=None
-        root.title('Word Clean · 新旧字形 · 字形统计版 2026-11-12'); root.geometry(f'{min(900,root.winfo_screenwidth()-60)}x{min(700,root.winfo_screenheight()-100)}'); root.minsize(min(700,root.winfo_screenwidth()-60),min(480,root.winfo_screenheight()-100))
+        root.title('Word Clean · 新旧字形 · 字形统计版 2026-11-13'); root.geometry(f'{min(900,root.winfo_screenwidth()-60)}x{min(700,root.winfo_screenheight()-100)}'); root.minsize(min(700,root.winfo_screenwidth()-60),min(480,root.winfo_screenheight()-100))
         style=ttk.Style(); style.theme_use('clam'); style.configure('.',font=('Microsoft YaHei UI',10)); style.configure('Title.TLabel',font=('Microsoft YaHei UI',20,'bold'))
         # Reserve the action area before the expandable content, including at high DPI.
         self.buttons=[]
