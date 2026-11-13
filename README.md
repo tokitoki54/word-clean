@@ -4,9 +4,9 @@
 
 ## 下载试用版
 
-[下载 Windows x64 试用版 v0.1.0](https://github.com/tokitoki54/word-clean/releases/tag/v0.1.0)。下载页面中的 `WordClean-v0.1.0-windows-x64.zip`，完整解压后运行 `WordClean.exe`。这是未签名的试用版本，建议先用文稿副本验证效果。
+[下载 Windows x64 试用版 v0.2.0（160条）](https://github.com/tokitoki54/word-clean/releases/tag/v0.2.0)。下载页面中的 `WordClean-v0.2.0-windows-x64.zip`，完整解压后运行 `WordClean/WordClean.exe`，保留 `_internal` 和默认CSV。这是未签名的预发布版本，建议先用文稿副本验证效果。
 
-当前源码默认字表已更新为160条；上述 v0.1.0 下载包仍内置122条，本次未重建或发布新版二进制。
+新版已重新构建，默认160条，包含舎→舍；[旧版 v0.1.0（122条）](https://github.com/tokitoki54/word-clean/releases/tag/v0.1.0) 保留。构建基线为 `39896b4`，包内 `build_source` 附窗口标题及160条自测补丁、精确构建源码与重建说明。验证范围和限制详见Release页面及包内TEST_REPORT.txt。
 
 ## 功能
 
